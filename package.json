@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
     "autoprefixer": "^9.8.6",
+    "formik": "^2.2.6",
     "history": "^5.0.0",
     "postcss": "^8.1.7",
     "postcss-cli": "^8.1.0",
@@ -18,7 +19,8 @@
     "react-scripts": "4.0.1",
     "tailwindcss": "^1.9.2",
     "watch": "^1.0.2",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "yup": "^0.32.8"
   },
   "scripts": {
     "start": "npm run watch:css && react-scripts start",

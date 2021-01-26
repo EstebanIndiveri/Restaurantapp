@@ -1,6 +1,33 @@
-import React, { Fragment } from 'react';
+import React, { Fragment,useState,useEffect,useContext } from 'react';
 import {Link} from 'react-router-dom';
+import {FirebaseContext} from '../../firebase'
+import Platillo from '../ui/Platillo';
+
 const Menu = () => {
+    const{firebase}=useContext(FirebaseContext);
+
+    const [platillos, setPlatillos] = useState([]);
+
+    useEffect(()=>{
+        const obtenerPlatillos=()=>{
+            firebase.db.collection('productos').onSnapshot(handleSnapshot);
+
+            
+        };
+        obtenerPlatillos();
+    },[])
+
+    // snapshot db en timpo real
+    const handleSnapshot =(snapshot)=>{
+        const platillos=snapshot.docs.map(doc=>{
+            return{
+                id:doc.id,
+                ...doc.data()
+            }
+        });
+        setPlatillos(platillos);
+    }
+
     return ( 
         <Fragment>
             <h1 className="text-3xl font-light mb-4">Menú</h1>

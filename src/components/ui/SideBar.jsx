@@ -11,7 +11,6 @@ const SideBar = () => {
                 <nav className="mt-10">
                     <NavLink className="p-1 text-gray-400 block hover:bg-yellow-500 hover:text-gray-900 transition duration-500 ease-in-out rounded mb-2" activeClassName="text-yellow-500" exact="true" to="/">Home</NavLink>
                     <NavLink className="p-1 text-gray-400 block hover:bg-yellow-500 hover:text-gray-900 transition duration-500 ease-in-out rounded" activeClassName="text-yellow-500" exact="true" to="/menu">Menú</NavLink>
-
                 </nav>
             </div>
         </div>

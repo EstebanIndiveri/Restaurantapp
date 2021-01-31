@@ -1,9 +1,11 @@
-import React,{Fragment} from 'react';
+import React,{Fragment,useContext} from 'react';
 
 const Test = () => {
     return ( 
         <Fragment>
-            <Text>Test enviroment dot</Text>
+            <h1>Title</h1>
+            <h2 className="text-center">Context styled</h2>
+
         </Fragment>
      );
 }

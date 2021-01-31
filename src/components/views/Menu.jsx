@@ -34,6 +34,12 @@ const Menu = () => {
             <Link to="/nuevo-platillo" className=" bg-blue-800 hover:bg-blue-700 inline-block mb-5 p-2 text-white font-bold transition-all ease-in-out rounded duration-500">
                 Agregar Platillo
             </Link>
+            {platillos.map(platillo=>(
+                <Platillo
+                    key={platillo.id}
+                    platillo={platillo}
+                />
+            ))}
         </Fragment>
         );
 }
